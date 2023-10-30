@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JUR's</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="MainSection">
+        <div id="PasswordMain">
+            <div id="Text">
+                <label class="Title">Website</label>
+                <hr class="Stroke"></hr>
+                <label class="Page">Enter Password</label>
+                <audio id="mail">
+                    <source src="../Assets/mail.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+            <div id="PasswordSection">
+                <div>
+                    <input type="text" required id="PasswordInput">
+                    <label class="PasswordLabel">Password</label>
+                </div>
+                <label onclick="Enter()" class="Enter">Continue</label>
+            </div>
+        </div>
+        <div id="DefaultMain">
+            <div id="Text">
+                <label class="Title">Website</label>
+                <hr class="Stroke"></hr>
+                <label class="Page">Exe Files</label>
+                <audio id="mail">
+                    <source src="../Assets/mail.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+
+            <div id="Buttons">
+                <a onclick="Download()" href="../Downloads/SnakeGame.exe" download="Snake.exe" class="Files">Snake</a>
+                <i>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const audio = document.getElementById("mail");
+        var index = "pineapple2";
+
+        audio.volume = 0.2;
+
+        function Enter() {
+            var Password = document.getElementById("PasswordInput").value;
+
+            if (Password !== index) {
+                alert("Invalid Password");
+            } else {
+                audio.play();
+                document.getElementById("PasswordMain").style.display = "none";
+                document.getElementById("DefaultMain").style.display = "flex";
+            }
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JUR's</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="MainSection">
+        <div class="Main">
+            <div class="Text">
+                <label class="Title">Website</label>
+                <hr class="Stroke"></hr>
+                <label class="Page">Choose where u want to go</label>
+                <audio id="mail">
+                    <source src="Assets/mail.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+            <div class="Buttons">
+                <a href="./Packs/index.html" class="WebsiteLink">Minecraft Texture Packs</a>
+                <a href="./Exe/index.html" class="WebsiteLink">Exe Files</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="StartSection">
+        <a onclick="start()" id="StartButton">Start</a>
+    </section>
+
+    <script>
+        const audio = document.getElementById("mail");
+        const button = document.getElementById("StartButton");
+
+        audio.volume = 0.2;
+
+        function start() {
+            audio.play();
+            document.getElementById("StartSection").style.display = "none";
+            document.getElementById("MainSection").style.display = "flex";
+        }
+    </script>
+</body>
+</html>

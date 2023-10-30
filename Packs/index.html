@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JUR's</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="MainSection">
+        <div class="Main">
+            <div class="Text">
+                <label class="Title">Website</label>
+                <hr class="Stroke"></hr>
+                <label class="Page">Minecraft Resource Packs</label>
+                <audio id="mail">
+                    <source src="../Assets/mail.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+            <div class="Buttons">
+                <a onclick="download()" href="./Pack.zip" download="Pack.zip" class="ResourcePack">Dark Mode</a>
+                <a onclick="download()" href="./Pack.zip" download="Pack.zip" class="ResourcePack">Full Bright</a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const audio = document.getElementById("mail");
+
+        audio.volume = 0.2;
+
+        function download() {
+            audio.play();
+        }
+    </script>
+</body>
+</html>
